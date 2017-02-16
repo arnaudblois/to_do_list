@@ -1,17 +1,38 @@
-sudo: true
-before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq build-essential gettext python-dev zlib1g-dev libpq-dev xvfb
-  - sudo apt-get install -qq libtiff4-dev libjpeg8-dev libfreetype6-dev liblcms1-dev libwebp-dev
-  - sudo apt-get install -qq graphviz-dev python-setuptools python3-dev python-virtualenv python-pip
-  - sudo apt-get install -qq firefox automake libtool libreadline6 libreadline6-dev libreadline-dev
-  - sudo apt-get install -qq libsqlite3-dev libxml2 libxml2-dev libssl-dev libbz2-dev wget curl llvm
+#  A basic travis.yml boilerplate for Django projects
+#
+#  The set-up assumes a postgreSQL database.
+#  more info at https://gist.github.com/ndarville/3625246 and
+#  http://www.lesinskis.com/travis_ci_django.html
+
+
 language: python
+
 python:
-- "3.5"
+  - "3.5"
+
 cache: pip
+
+services: postgresql
+
+env:
+  global:
+    - DJANGO_SETTINGS_MODULE="config.settings.test"
+    - PYTHONPATH="/home/travis/build/arnaudblois/to_do_list"
+    - PIP_USE_MIRRORS=true
+    - BUILD_ON_TRAVIS=true
+  matrix:
+    - DJANGO=1.10.5 DB=postgresql
+
+
 install:
   - pip install -r requirements/test.txt
+  - pip install django==$DJANGO --quiet
+  - pip install psycopg2 --quiet
+
+before_script:
+  - psql -c "CREATE DATABASE travisci;" -U postgres
+  - python3 makemigrations --settings=$DJANGO_SETTINGS_MODULE
+  - python3 migrate --settings=$DJANGO_SETTINGS_MODULE
+
 script:
-  - cd to_do_list/
-  - python manage.py test --settings=config.settings.test
+  - python3 manage.py test --settings=$DJANGO_SETTINGS_MODULE

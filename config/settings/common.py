@@ -10,6 +10,8 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
 import environ
+import os
+
 
 ROOT_DIR = environ.Path(__file__) - 3  # (to_do_list/config/settings/common.py - 3 = to_do_list/)
 APPS_DIR = ROOT_DIR.path('to_do_list')
@@ -99,12 +101,29 @@ ADMINS = (
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 
+# -----------------------------------------------------------------------------
 # DATABASE CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///origin'),
-}
+# Setting up a TRAVIS Database settings
+# more info at https://gist.github.com/ndarville/3625246 and
+# http://www.lesinskis.com/travis_ci_django.html
+if 'BUILD_ON_TRAVIS' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE':   'django.db.backends.postgresql_psycopg2',
+            'NAME':     'travisci',
+            'USER':     'postgres',
+            'PASSWORD': '',
+            'HOST':     'localhost',
+            'PORT':     '',
+        }
+    }
+else:
+    DATABASES = {
+        'default': env.db('DATABASE_URL', default='postgres:///origin'),
+    }
+
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
 

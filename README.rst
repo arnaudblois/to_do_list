@@ -118,7 +118,7 @@ A few extra features I can think of that may (or not) make this project useful t
 
 * In combination with the 'assign' story above, add deadline management. This would affect the reputation gain
 
-* Increase the incentive by having
+* Increase the incentive by making the reputation more valuable somehow
 
 * Use React + Redux to build a single page app using the Django back-end as an API
 
