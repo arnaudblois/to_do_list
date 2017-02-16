@@ -13,3 +13,7 @@ mock==2.0.0
 # pytest
 pytest-django==3.1.2
 pytest-sugar==0.8.0
+
+# Beautiful Soup 4
+# Required for tests involving parsing  the response content
+bs4==0.0.1
