@@ -241,23 +241,22 @@ class TestHomeFilterOrderTask(BaseTaskTestCase):
         """
         should be possible to order by status in ascending and descending order
         """
-        t1 = TaskFactory(name="new", creator=self.user, status=Task.STATUS.new)
+        t4 = TaskFactory(name="closed", creator=self.user, status=Task.STATUS.closed)
         t2 = TaskFactory(name="assigned", creator=self.user, status=Task.STATUS.assigned)
         t3 = TaskFactory(name="completed", creator=self.user, status=Task.STATUS.completed)
-        t4 = TaskFactory(name="closed", creator=self.user, status=Task.STATUS.closed)
-        t5 = TaskFactory(name="new_2", creator=self.user, status=Task.STATUS.new)
+        t1 = TaskFactory(name="new", creator=self.user, status=Task.STATUS.new)
         # ascending order
         response = self.client.get(self.url, data={'sort': 'status'})
         soup = BeautifulSoup(response.content, "html.parser")
         td_names = soup.find_all("td", class_="name")
         name_list = [name.a.get_text() for name in td_names]
-        self.assertEqual(name_list, ['new', 'new_2', 'assigned', 'completed', 'closed'])
+        self.assertEqual(name_list, ['new', 'assigned', 'completed', 'closed'])
         # descending order
         response = self.client.get(self.url, data={'sort': '-status'})
         soup = BeautifulSoup(response.content, "html.parser")
         td_names = soup.find_all("td", class_="name")
         name_list = [name.a.get_text() for name in td_names]
-        self.assertEqual(name_list, ['closed', 'completed', 'assigned', 'new', 'new_2'])
+        self.assertEqual(name_list, ['closed', 'completed', 'assigned', 'new'])
 
     def test_filter_name(self):
         """
@@ -348,7 +347,7 @@ class TestProfileUpdateView(BaseTaskTestCase):
             reverse('tasks:home')
         )
 
-    def test_creation(self):
+    def test_valid_update(self):
         """
         checks the profile has been modified accordingly upon submission of valid data
         """
@@ -569,7 +568,7 @@ class TestTaskCompleteView(BaseTaskTestCase):
         self.assertEqual(self.task.completed_by, self.user)
 
     @patch('to_do_list.tasks.models.Task.is_visible_by', lambda *_: False)
-    def test_deny_closing_for_invisible_task(self):
+    def test_deny_completion_for_invisible_task(self):
         """
         The user should be denied access to tasks which are not visible to her
         (we patch Task.is_visible_by, any task should fail)
@@ -578,7 +577,7 @@ class TestTaskCompleteView(BaseTaskTestCase):
         self.assertEqual(response.status_code, 400)
 
     @patch('to_do_list.tasks.models.Task.is_new', lambda *_: False)
-    def test_deny_deletion_to_task_not_completed(self):
+    def test_deny_completion_task_not_completed(self):
         """
         Should be impossible to complete tasks which are not new (patc
         Task.is_new so any task should fail)
@@ -629,7 +628,6 @@ class TestTaskCloseView(BaseTaskTestCase):
         """
         The user should be denied access to tasks belonging to other users
         """
-        team2 = TeamFactory(name="other_team")
         task2 = TaskFactory(
             creator=self.profile2.user, completed_by=self.user,
             status=Task.STATUS.completed,
@@ -639,7 +637,7 @@ class TestTaskCloseView(BaseTaskTestCase):
         response = self.client.post(url, {})
         self.assertEqual(response.status_code, 404)
 
-    def test_deny_deletion_to_task_not_completed(self):
+    def test_deny_closing_task_not_completed(self):
         """
         The user should be denied access to tasks belonging to other users
         """
