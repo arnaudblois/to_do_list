@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Profile Creation"%}{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h3>{{ user.username }}: {% trans "create your profile" %}</h3>
+  <form class="form-horizontal" method="POST" action="{% url 'tasks:create_profile' %}">
+    {% csrf_token %}
+    {{ form.profile_form|crispy }}
+	<div class="vertical-space">
+    	{{ form.user_form|crispy }}
+	</div>
+    <div class="control-group">
+      <div class="controls">
+        <button type="submit" class="btn">{% trans "Submit"%}</button>
+      </div>
+    </div>
+  </form>
+ </div>
+{% endblock %}

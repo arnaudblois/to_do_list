@@ -1,0 +1,14 @@
+{% load i18n %}
+
+{% if record.is_editable %}
+    <a  href="{% url 'tasks:update_task'  pk=record.pk %}"><i class="fa fa-pencil-square-o" title="{% trans "Edit this task" %}"></i></a>
+    <a class="ajax_link" data-confirm="{% trans "Are you sure you want to delete this task?" %}" href="{% url 'tasks:delete_task'  pk=record.pk %}"><i class="fa fa-trash-o" title="{% trans "Delete this task" %}"></i></a>
+{% endif %}
+
+{% if record.can_be_closed %}
+    <a class="ajax_link" data-confirm="{% trans "Mark this task as closed?" %}" href="{% url 'tasks:close_task'  pk=record.pk %}"><i class="fa fa fa-check-square-o" title="{% trans "Close this task" %}"></i></a>
+{% endif %}
+
+{% if record.can_be_completed %}
+    <a class="ajax_link" data-confirm="{% trans "Mark this task as completed?" %}" href="{% url 'tasks:complete_task'  pk=record.pk %}"><i class="fa fa-check-square-o" title="{% trans "Mark as done" %}"></i></a>
+{% endif %}

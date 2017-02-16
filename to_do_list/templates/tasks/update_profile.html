@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Profile Edition"%}{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h3>{{ user.username }}: {% trans "Update your profile" %}</h3>
+  <form class="form-horizontal" method="POST" action="{% url 'tasks:update_profile' %}">
+    {% csrf_token %}
+	<div class="vertical-space">
+    	{{ form|crispy }}
+	</div>
+    <div class="control-group">
+      <div class="controls">
+        <button type="submit" class="btn">{% trans "Submit"%}</button>
+      </div>
+    </div>
+  </form>
+
+  <section class="vertical-space">
+      <a class="btn btn-secondary" href="{% url 'account_email' %}" role="button">{% trans "Manage my e-mail" %}</a>
+      <a class="btn btn-secondary" href="{% url 'account_change_password' %}" role="button">{% trans "Change my password" %}</a>
+
+  </section>
+
+ </div>
+
+
+
+{% endblock %}

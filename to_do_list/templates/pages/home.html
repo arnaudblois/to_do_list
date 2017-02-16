@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+	<div class="jumbotron">
+	    <h3 class="display-6">{% trans "Welcome" %} {{ user.first_name }} {{ user.last_name }}!</h3>
+	    <p class="lead">
+	    {% blocktrans %}
+	    	As a registered user of <i>todolist.ovh</i>, you now have access to your ToDoList Interface.
+	    {% endblocktrans %}
+	    </p>
+	        <p><a class="btn btn-success" href="{% url 'tasks:home' %}" class="btn btn-primary">{% trans "My admin interface" %}</a></p>
+    </div>
+
+
+{% else %}
+
+	<div class="jumbotron">
+	    <h3 class="display-6">{% trans "Welcome to <i>ToDoList.ovh</i>" %}</h3>
+        <p  class="lead">
+    	    {% blocktrans %}
+            If you stumbled here by chance, please note that this whole website is part of a technical test for a nice start-up.
+            That being said, feel free to sign up to have a look around and create your to-do lists.
+             {% endblocktrans %}
+	    </p>
+	        <p><a class="btn btn-success" href="{% url 'account_signup' %}" role="button">{% trans "Sign up for free" %}</a></p>
+	        <p><a class="btn btn-success" href="{% url 'account_login' %}" role="button">{% trans "Already a member? Login" %}</a></p>
+    </div>
+
+
+{% endif %}
+
+{% endblock %}

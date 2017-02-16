@@ -1,0 +1,29 @@
+{% extends request.is_ajax|yesno:"ajax_base.html,tasks/base_home.html" %}
+{% load i18n %}
+{% load render_table from django_tables2 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{% if profile %}
+    <h4 class="text-center" title="{% trans 'Lists all tasks which are visible to you. Do not hesitate to help someone by completing the task they posted to gain reputation and a better karma.' %}">
+        {% trans "Task List" %}
+    </h4>
+    <div class="row vertical-space color_highlight">
+        <div class="col-sm-2"></div><div class="col-sm-3"><div class="vertical-center vertical-space"><b>{% trans "Filter the list" %}</b></div></div><div class="col-sm-7">{% crispy filter.form %}</div>
+    </div>
+    <div class="table-responsive">
+    {% render_table table "tasks/table.html" %}
+    </div>
+
+     <a class="btn btn-primary" href="{% url "tasks:create_task" %}">{% trans "Create a new task" %}</a>
+
+{% else %}
+
+      <div>
+        {% trans "Nearly there! We simply need a few more info before we start." %}
+        <a class="btn btn-primary" href="{% url "tasks:create_profile" %}">{% trans "Finalise my account" %}</a>
+      </div>
+
+
+{% endif %}
+{% endblock %}

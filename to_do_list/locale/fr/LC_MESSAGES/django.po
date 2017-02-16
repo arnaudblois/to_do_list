@@ -1,0 +1,695 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-15 23:58+0000\n"
+"PO-Revision-Date: 2017-02-16 00:16+0000\n"
+"Last-Translator: Arnaud Blois <arnaudblois@dinameal.fr>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: to_do_list/tasks/forms.py:36
+msgid ""
+"\n"
+"            By ticking this box, you agree with our terms and conditions\n"
+"            (tldr; todolist.ovh is just a demo project and comes with no\n"
+"            guarantee.\n"
+"            "
+msgstr ""
+"\n"
+"Cliquez ici pour indiquer que vous avez lu et approuvé nos conditions "
+"d'utilisations (en résumé, todolist.ovh est qu'un site de démo, aucune "
+"garantie n'est donnée)"
+
+#: to_do_list/tasks/forms.py:41
+msgid ""
+"\n"
+"            Please select a team. Choose wisely your faction as this can't "
+"be\n"
+"            changed later on.\n"
+"            "
+msgstr ""
+"\n"
+"            Veuillez choisir une équipe. Choisissez judicieusement votre "
+"faction car cela ne peut pas être changé\n"
+"\t   plus tard"
+
+#: to_do_list/tasks/models.py:61
+msgid "new"
+msgstr "nouveau"
+
+#: to_do_list/tasks/models.py:62
+msgid "assigned"
+msgstr "assigné"
+
+#: to_do_list/tasks/models.py:63
+msgid "completed"
+msgstr "achevé"
+
+#: to_do_list/tasks/models.py:64
+msgid "closed"
+msgstr "fermé"
+
+#: to_do_list/tasks/models.py:80
+msgid "private"
+msgstr "privé"
+
+#: to_do_list/tasks/models.py:80
+msgid "team only"
+msgstr "équipe seulement"
+
+#: to_do_list/tasks/models.py:81
+msgid "public"
+msgstr "public"
+
+#: to_do_list/tasks/models.py:94
+msgid "trivial"
+msgstr "trivial"
+
+#: to_do_list/tasks/models.py:94
+msgid "easy"
+msgstr "facile"
+
+#: to_do_list/tasks/models.py:95
+msgid "OK"
+msgstr "OK"
+
+#: to_do_list/tasks/models.py:95
+msgid "hard"
+msgstr "difficile"
+
+#: to_do_list/tasks/models.py:96
+msgid "heroic"
+msgstr "héroïque"
+
+#: to_do_list/tasks/models.py:96
+msgid "nightmare"
+msgstr "cauchemar"
+
+#: to_do_list/tasks/tables.py:63
+msgid "There are no task matching the search criteria..."
+msgstr "Il n'existe aucune tâche correspondant à votre recherche"
+
+#: to_do_list/tasks/tables.py:84
+msgid "Filter"
+msgstr "Filtre"
+
+#: to_do_list/tasks/views.py:83
+msgid "You're all set, you are now able to use all our features!"
+msgstr "Cest bon, vous pouvez désormais utiliser toutes nos options"
+
+#: to_do_list/tasks/views.py:110
+msgid "You must have a valid profile to access this page"
+msgstr "Vous devez avoir un profil valide pour accéder à cette page"
+
+#: to_do_list/tasks/views.py:122
+msgid "Your profile has been successfully updated"
+msgstr "Votre profile a été mis à jour"
+
+#: to_do_list/tasks/views.py:139
+msgid "Your task has been successfully created."
+msgstr "La nouvelle tâche a été créée."
+
+#: to_do_list/tasks/views.py:157
+msgid "Your task has been successfully updated."
+msgstr "La tâche a été modifiée."
+
+#: to_do_list/tasks/views.py:169
+msgid "You cannot edit a task modified by other people"
+msgstr "Vous ne pouvez pas éditer une tâche modifiée par quelqu'un d'autre"
+
+#: to_do_list/tasks/views.py:187
+msgid "You cannot see this tasks"
+msgstr "Vous ne pouvez pas accéder à cette tâche"
+
+#: to_do_list/tasks/views.py:206 to_do_list/tasks/views.py:226
+msgid "You do not have the right to complete this task"
+msgstr "Vous n'avez pas le droit de compléter cette tâche"
+
+#: to_do_list/tasks/views.py:244
+msgid "You do not have the right to delete this task"
+msgstr "Vous n'avez pas le droit d'effacer cette tâche"
+
+#: to_do_list/templates/account/account_inactive.html:5
+#: to_do_list/templates/account/account_inactive.html:8
+msgid "Account Inactive"
+msgstr "Compte inactif"
+
+#: to_do_list/templates/account/account_inactive.html:10
+msgid "This account is inactive."
+msgstr "Ce compte est inactif"
+
+#: to_do_list/templates/account/email.html:7
+msgid "Account"
+msgstr "Compte"
+
+#: to_do_list/templates/account/email.html:10
+msgid "E-mail Addresses"
+msgstr "Adresses email"
+
+#: to_do_list/templates/account/email.html:13
+msgid "The following e-mail addresses are associated with your account:"
+msgstr "Les adresses suivanntes sont associées à votre compte."
+
+#: to_do_list/templates/account/email.html:27
+msgid "Verified"
+msgstr "Vérifié"
+
+#: to_do_list/templates/account/email.html:29
+msgid "Unverified"
+msgstr "Non-vérifié"
+
+#: to_do_list/templates/account/email.html:31
+msgid "Primary"
+msgstr "Principale"
+
+#: to_do_list/templates/account/email.html:37
+msgid "Make Primary"
+msgstr "Rendre Principale"
+
+#: to_do_list/templates/account/email.html:38
+msgid "Re-send Verification"
+msgstr "Ré-envoyer vérification"
+
+#: to_do_list/templates/account/email.html:39
+msgid "Remove"
+msgstr "Enlever"
+
+#: to_do_list/templates/account/email.html:46
+msgid "Warning:"
+msgstr "Attention:"
+
+#: to_do_list/templates/account/email.html:46
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+"You n'avez pour l'instant aucune adresse email. Vous devriez vraiment en "
+"ajouter une si vous voulez recevoir des notifications ou au cas où vous "
+"oublier votre mot de passe."
+
+#: to_do_list/templates/account/email.html:51
+msgid "Add E-mail Address"
+msgstr "Ajouter adresse email"
+
+#: to_do_list/templates/account/email.html:56
+msgid "Add E-mail"
+msgstr "Ajouter email"
+
+#: to_do_list/templates/account/email.html:66
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr "Voulez-vous vraiment enlever l'email sélectionné?"
+
+#: to_do_list/templates/account/email_confirm.html:6
+#: to_do_list/templates/account/email_confirm.html:10
+msgid "Confirm E-mail Address"
+msgstr "Confirmer l'adresse mail"
+
+#: to_do_list/templates/account/email_confirm.html:16
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+"Veuillez confirmer que <a href=\"mailto:%(email)s\">%(email)s</a> est "
+"l'adresse mail de l'utilisateur %(user_display)s."
+
+#: to_do_list/templates/account/email_confirm.html:20
+msgid "Confirm"
+msgstr "Confirmer"
+
+#: to_do_list/templates/account/email_confirm.html:27
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+"Ce lien de confirmation est expiré ou invalide, veuillez <a href="
+"\"%(email_url)s\">faire une nouvelle demande par email</a>."
+
+#: to_do_list/templates/account/login.html:7
+#: to_do_list/templates/account/login.html:11
+#: to_do_list/templates/account/login.html:44 to_do_list/templates/base.html:57
+msgid "Sign In"
+msgstr "S'inscrire"
+
+#: to_do_list/templates/account/login.html:16
+#, python-format
+msgid ""
+"Please sign in with one\n"
+"of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign "
+"up</a>\n"
+"for a %(site_name)s account and sign in below:"
+msgstr ""
+"Veuillez signer avec un de vos comptes de tiers-partie existants. Ou bien <a "
+"href=\"%(signup_url)s\">inscrivez vous</a>\n"
+"pour créer un compte pour %(site_name)s et connecter vous ci-dessous:"
+
+#: to_do_list/templates/account/login.html:26
+msgid "or"
+msgstr "ou"
+
+#: to_do_list/templates/account/login.html:33
+#, python-format
+msgid ""
+"If you have not created an account yet, then please\n"
+"<a href=\"%(signup_url)s\">sign up</a> first."
+msgstr ""
+"Si vous n'avez pas encore créé un compte, veuillez préalablement \n"
+"<a href=\"%(signup_url)s\">vous inscrire</a>."
+
+#: to_do_list/templates/account/login.html:43
+msgid "Forgot Password?"
+msgstr "Mot de passe perdu?"
+
+#: to_do_list/templates/account/logout.html:5
+#: to_do_list/templates/account/logout.html:8
+#: to_do_list/templates/account/logout.html:17
+#: to_do_list/templates/base.html:48
+msgid "Sign Out"
+msgstr "Se déconnecter"
+
+#: to_do_list/templates/account/logout.html:10
+msgid "Are you sure you want to sign out?"
+msgstr "Êtes-vous sûr de vouloir vous déconnecter?"
+
+#: to_do_list/templates/account/password_change.html:6
+#: to_do_list/templates/account/password_change.html:9
+#: to_do_list/templates/account/password_change.html:14
+#: to_do_list/templates/account/password_reset_from_key.html:5
+#: to_do_list/templates/account/password_reset_from_key.html:8
+#: to_do_list/templates/account/password_reset_from_key_done.html:4
+#: to_do_list/templates/account/password_reset_from_key_done.html:7
+msgid "Change Password"
+msgstr "Change le mot de passe"
+
+#: to_do_list/templates/account/password_reset.html:7
+#: to_do_list/templates/account/password_reset.html:11
+#: to_do_list/templates/account/password_reset_done.html:6
+#: to_do_list/templates/account/password_reset_done.html:9
+msgid "Password Reset"
+msgstr "Réinitialiser le mot de passe"
+
+#: to_do_list/templates/account/password_reset.html:16
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+"Mot de passe oublié? Entrez votre adresse mail ci-dessous et nous vous "
+"enverrons un lien de réinitialisation."
+
+#: to_do_list/templates/account/password_reset.html:21
+msgid "Reset My Password"
+msgstr "Réinitialiser mon mot de passe"
+
+#: to_do_list/templates/account/password_reset.html:24
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr ""
+"Veuillez nous contacter si vous rencontrer des difficultés pour "
+"réinitialiser votre mot de passe"
+
+#: to_do_list/templates/account/password_reset_done.html:15
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes.  It may end up in your spam folder. "
+msgstr ""
+"Nous vous avons envoyé un email. Veuillez nous contacter si vous ne l'avez "
+"pas reçu d'ici quelques minutes (il se peut qu'il soit arrivé dans votre "
+"boîte de spam."
+
+#: to_do_list/templates/account/password_reset_from_key.html:8
+msgid "Bad Token"
+msgstr "Ticket invalide"
+
+#: to_do_list/templates/account/password_reset_from_key.html:12
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+"Le lien de réinitialisation du mot de passe est invalide, probablement car "
+"il a déjà été utilisé. Vous pouvez <a href=\"%(passwd_reset_url)s\">générer "
+"un nouveau</a>."
+
+#: to_do_list/templates/account/password_reset_from_key.html:18
+msgid "change password"
+msgstr "changer le mot de passe"
+
+#: to_do_list/templates/account/password_reset_from_key.html:21
+#: to_do_list/templates/account/password_reset_from_key_done.html:8
+msgid "Your password is now changed."
+msgstr "Votre mot de passe a été changé."
+
+#: to_do_list/templates/account/password_set.html:6
+#: to_do_list/templates/account/password_set.html:9
+#: to_do_list/templates/account/password_set.html:14
+msgid "Set Password"
+msgstr "Entrer Mot de Passe"
+
+#: to_do_list/templates/account/signup.html:6
+msgid "Signup"
+msgstr "S'inscire"
+
+#: to_do_list/templates/account/signup.html:9
+#: to_do_list/templates/account/signup.html:19
+msgid "Sign Up"
+msgstr "S'inscrire"
+
+#: to_do_list/templates/account/signup.html:11
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+msgstr ""
+"Déjà membre? En ce cas, veuillez <a href=\"%(login_url)s\">vous connecter</"
+"a>."
+
+#: to_do_list/templates/account/signup_closed.html:5
+#: to_do_list/templates/account/signup_closed.html:8
+msgid "Sign Up Closed"
+msgstr "Inscription close"
+
+#: to_do_list/templates/account/signup_closed.html:10
+msgid "We are sorry, but the sign up is currently closed."
+msgstr "Veuillez nous excuser, l'inscription n'est pas ouverte."
+
+#: to_do_list/templates/account/verification_sent.html:5
+#: to_do_list/templates/account/verification_sent.html:8
+#: to_do_list/templates/account/verified_email_required.html:5
+#: to_do_list/templates/account/verified_email_required.html:8
+msgid "Verify Your E-mail Address"
+msgstr "Vérifiez votre adresse mail"
+
+#: to_do_list/templates/account/verification_sent.html:10
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"Nous vous avons envoyé un e-mail pour vérification. Veuillez suivre le lien "
+"qui s'y trouve en vue de terminer votre inscription. N'hésitez pas à nous "
+"contacter si vous ne le recevez pas d'ici quelques minutes."
+
+#: to_do_list/templates/account/verified_email_required.html:12
+msgid ""
+"To access this part of the site, we would need to verify your ownership of "
+"the e-mail address you provided. "
+msgstr ""
+"Pour accéder à cette partie du site, vous devez prouver que vous êtes le "
+"propriétaire de l'adresse email fournie."
+
+#: to_do_list/templates/account/verified_email_required.html:14
+msgid ""
+"We have sent an e-mail to you for verification. Please click on the link "
+"inside this e-mail. Please contact us if you do not receive it within a few "
+"minutes (it may end up in your spam folder)."
+msgstr ""
+"Nous vous avons envoyé un e-mail pour vérification. Veuillez suivre le lien "
+"qui s'y trouve en vue de terminer votre inscription. N'hésitez pas à nous "
+"contacter si vous ne le recevez pas d'ici quelques minutes (il peut avoir "
+"atterri dans votre boîte de spam)."
+
+#: to_do_list/templates/account/verified_email_required.html:16
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a>."
+msgstr ""
+"<strong>Note:</strong> vous pouvez toujours <a href=\"%(email_url)s"
+"\">changer votre adresse mail</a>."
+
+#: to_do_list/templates/base.html:11
+msgid "To Do List -- technical test"
+msgstr "To Do List -- test technique"
+
+#: to_do_list/templates/base.html:33
+msgid "Home"
+msgstr "Accueil"
+
+#: to_do_list/templates/base.html:36
+msgid "About"
+msgstr "À propos"
+
+#: to_do_list/templates/base.html:45
+msgid "My Profile"
+msgstr "Mon Profil"
+
+#: to_do_list/templates/base.html:52 to_do_list/templates/base.html:53
+msgid "Sign up"
+msgstr "S'inscrire"
+
+#: to_do_list/templates/base.html:62
+msgid "To Do List"
+msgstr "To Do List"
+
+#: to_do_list/templates/base.html:77
+msgid "Your Reputation"
+msgstr "Votre réputation"
+
+#: to_do_list/templates/base.html:78
+msgid "Anytime you complete somebody else\\"
+msgstr ""
+
+#: to_do_list/templates/base.html:96
+msgid "Questions? Do not hesitate to reach out"
+msgstr "Questions? N'hésitez pas à me contacter"
+
+#: to_do_list/templates/base.html:102
+msgid "GitHub"
+msgstr "GitHub"
+
+#: to_do_list/templates/base.html:104
+msgid "View source code"
+msgstr "Consulter le code source"
+
+#: to_do_list/templates/base.html:109
+msgid "Email"
+msgstr "Email"
+
+#: to_do_list/templates/base.html:116
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: to_do_list/templates/base.html:118
+msgid "Connect with me"
+msgstr "Contactez-moi"
+
+#: to_do_list/templates/pages/home.html:8
+msgid "Welcome"
+msgstr "Bienvenue"
+
+#: to_do_list/templates/pages/home.html:10
+msgid ""
+"\n"
+"\t    \tAs a registered user of <i>todolist.ovh</i>, you now have access to "
+"your ToDoList Interface.\n"
+"\t    "
+msgstr ""
+"\n"
+"\t    \tMaintenant que vous êtes enregistré(e) sur <i>todolist.ovh</i>, vous "
+"avez accès à l'interface des listes..\n"
+"\t"
+
+#: to_do_list/templates/pages/home.html:14
+msgid "My admin interface"
+msgstr "Mon interface d'admin"
+
+#: to_do_list/templates/pages/home.html:21
+msgid "Welcome to <i>ToDoList.ovh</i>"
+msgstr "Bienvenue sur <i>ToDoList.ovh</i>"
+
+#: to_do_list/templates/pages/home.html:23
+msgid ""
+"\n"
+"            If you stumbled here by chance, please note that this whole "
+"website is part of a technical test for a nice start-up.\n"
+"            That being said, feel free to sign up to have a look around and "
+"create your to-do lists.\n"
+"             "
+msgstr ""
+"\n"
+"           Si vous êtes arrivé ici par hasaes, veuillez noter que ce site "
+"est un test technique pour une start-up pleine de promesses.\n"
+"           Ceci dit, n'hésitez pas à vous inscrire pour jeter un oeil et "
+"créer votre to-do lists."
+
+#: to_do_list/templates/pages/home.html:28
+msgid "Sign up for free"
+msgstr "Inscription gratuite"
+
+#: to_do_list/templates/pages/home.html:29
+msgid "Already a member? Login"
+msgstr "Déjà membre? Connectez-vous"
+
+#: to_do_list/templates/tasks/actions_cell.html:4
+#: to_do_list/templates/tasks/detail_task.html:26
+msgid "Edit this task"
+msgstr "Éditer cette tâche"
+
+#: to_do_list/templates/tasks/actions_cell.html:5
+msgid "Are you sure you want to delete this task?"
+msgstr "Êtes-vous sûr de vouloir effacer cette tâche?"
+
+#: to_do_list/templates/tasks/actions_cell.html:5
+#: to_do_list/templates/tasks/detail_task.html:33
+#: to_do_list/templates/tasks/update_task_form.html:24
+msgid "Delete this task"
+msgstr "Enlever cette tâche"
+
+#: to_do_list/templates/tasks/actions_cell.html:9
+msgid "Mark this task as closed?"
+msgstr "Marquer cette tâche fermée"
+
+#: to_do_list/templates/tasks/actions_cell.html:9
+msgid "Close this task"
+msgstr "Clore cette tâche"
+
+#: to_do_list/templates/tasks/actions_cell.html:13
+msgid "Mark this task as completed?"
+msgstr "Marquer cette tâche complétée"
+
+#: to_do_list/templates/tasks/actions_cell.html:13
+msgid "Mark as done"
+msgstr "Marquer 'complétée'"
+
+#: to_do_list/templates/tasks/create_profile.html:6
+msgid "Profile Creation"
+msgstr "Création de profil"
+
+#: to_do_list/templates/tasks/create_profile.html:10
+msgid "create your profile"
+msgstr "Créez votre profil"
+
+#: to_do_list/templates/tasks/create_profile.html:19
+#: to_do_list/templates/tasks/update_profile.html:18
+msgid "Submit"
+msgstr "Soumettre"
+
+#: to_do_list/templates/tasks/create_task_form.html:5
+#: to_do_list/templates/tasks/create_task_form.html:9
+msgid "Creating a new task"
+msgstr "Création d'une nouvelle tâche"
+
+#: to_do_list/templates/tasks/create_task_form.html:15
+msgid "Create task "
+msgstr "Créer tâche"
+
+#: to_do_list/templates/tasks/detail_task.html:5
+#: to_do_list/templates/tasks/detail_task.html:10
+msgid "Details for task:"
+msgstr "Détails pour la tâche:"
+
+#: to_do_list/templates/tasks/detail_task.html:12
+msgid "Description"
+msgstr "Description"
+
+#: to_do_list/templates/tasks/detail_task.html:13
+msgid "Creator"
+msgstr "Créateur"
+
+#: to_do_list/templates/tasks/detail_task.html:14
+msgid "Difficulty"
+msgstr "Difficulté"
+
+#: to_do_list/templates/tasks/detail_task.html:15
+msgid "Status"
+msgstr "Status"
+
+#: to_do_list/templates/tasks/detail_task.html:17
+msgid "Completed by"
+msgstr "Achevée par"
+
+#: to_do_list/templates/tasks/detail_task.html:28
+msgid "Please confirm the cancellation of this task"
+msgstr "Veuillez confirmer la suppression de cette tâche"
+
+#: to_do_list/templates/tasks/table.html:61
+msgid "previous"
+msgstr "précédent"
+
+#: to_do_list/templates/tasks/table.html:69
+#, python-format
+msgid "Page %(current)s of %(total)s"
+msgstr "Page %(current)s sur %(total)s"
+
+#: to_do_list/templates/tasks/table.html:77
+msgid "next"
+msgstr "suivant"
+
+#: to_do_list/templates/tasks/table_home.html:8
+msgid ""
+"Lists all tasks which are visible to you. Do not hesitate to help someone by "
+"completing the task they posted to gain reputation and a better karma."
+msgstr ""
+"Liste toutes les tâches auxquelles vous avez accès. N'hésitez pas à aider un "
+"utilisateur en complétant les tâches qu'il a postées, cela augmentera votre "
+"réputation et vous donnera un meilleur karma."
+
+#: to_do_list/templates/tasks/table_home.html:9
+msgid "Task List"
+msgstr "Liste de Tâches"
+
+#: to_do_list/templates/tasks/table_home.html:12
+msgid "Filter the list"
+msgstr "Filtrer la liste"
+
+#: to_do_list/templates/tasks/table_home.html:18
+msgid "Create a new task"
+msgstr "Créer une nouvelle tâche"
+
+#: to_do_list/templates/tasks/table_home.html:23
+msgid "Nearly there! We simply need a few more info before we start."
+msgstr "Presque terminé ! Plus que quelques infos avant de commencer. "
+
+#: to_do_list/templates/tasks/table_home.html:24
+msgid "Finalise my account"
+msgstr "Finaliser mon compte"
+
+#: to_do_list/templates/tasks/update_profile.html:6
+msgid "Profile Edition"
+msgstr "Édition de profil"
+
+#: to_do_list/templates/tasks/update_profile.html:10
+msgid "Update your profile"
+msgstr "Mettre à jour votre profil"
+
+#: to_do_list/templates/tasks/update_profile.html:24
+msgid "Manage my e-mail"
+msgstr "Gérer mon e-mail"
+
+#: to_do_list/templates/tasks/update_profile.html:25
+msgid "Change my password"
+msgstr "Changer le mot de passe"
+
+#: to_do_list/templates/tasks/update_task_form.html:5
+#: to_do_list/templates/tasks/update_task_form.html:9
+msgid "Updating the task"
+msgstr "Éditer la tâche"
+
+#: to_do_list/templates/tasks/update_task_form.html:15
+msgid "Update the task info"
+msgstr "Éditer les infos de la tâche"
+
+#: to_do_list/templates/tasks/update_task_form.html:39
+msgid "Please confirm the deletion of this task"
+msgstr "Veuillez confirmer la suppression de cette tâche"
+
+#: to_do_list/users/models.py:13
+msgid "Name of User"
+msgstr "Nom d'utilisateur"
+
+#~ msgid "Your account is correctly set up."
+#~ msgstr "Votre compte est correctement configuré."
+
+#~ msgid "Edit my profile"
+#~ msgstr "Éditer mon profil"

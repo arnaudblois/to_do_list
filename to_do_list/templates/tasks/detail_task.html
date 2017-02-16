@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Details for task:" %} {{ object.name }} {% endblock %}
+
+{% block content %}
+
+<section>
+	<h6> {% trans "Details for task:" %} {{ object.name }} </h6>
+	<dl class="row">
+		<dt class="col-sm-3">{% trans "Description" %}</dt><dd class="col-sm-9">{{ object.description }}</dd>
+		<dt class="col-sm-3">{% trans "Creator" %}</dt><dd class="col-sm-9">{{ object.creator }}</dd>
+		<dt class="col-sm-3">{% trans "Difficulty" %}</dt><dd class="col-sm-9">{{ object.get_difficulty_display }}</dd>
+		<dt class="col-sm-3">{% trans "Status" %}</dt><dd class="col-sm-9">{{ object.get_status_display }}</dd>
+        {% if task.status == 2 or task.status == 3 %} {# if the task has been completed or closed #}
+		<dt class="col-sm-3">{% trans "Completed by" %}</dt><dd class="col-sm-9">{{ object.completed_by }}</dd>
+        {% endif %}
+	</dl>
+</section>
+
+{% if object.status == 0 and object.creator == request.user %}
+
+  <section class="row">
+
+    <a href={% url 'tasks:update_task' pk=object.pk %} class="btn btn-secondary col-sm-3">{% trans "Edit this task" %}</a>
+
+    <form method="POST" id="delete_form"  data-text-confirm="{% trans "Please confirm the cancellation of this task" %}"
+        action="{% url 'tasks:delete_task'  pk=object.pk %}"  class="col-sm-3">
+        {% csrf_token %}
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn btn-secondary">{% trans "Delete this task" %}</button>
+          </div>
+        </div>
+    </form>
+
+ </section>
+
+{% endif %}
+
+
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+
+$('#delete_form').submit(function(event){
+
+	event.preventDefault()
+	swal({
+	  text: $(this).data('text-confirm'),
+	  showCancelButton: true, confirmButtonText: 'Submit',
+	  showLoaderOnConfirm: true, allowOutsideClick: false,
+	}).then(
+        function(){
+    		$('#delete_form').unbind('submit')
+    		$('#delete_form').submit()
+	   }, function(dismiss){
+    })
+})
+</script>
+
+{% endblock %}

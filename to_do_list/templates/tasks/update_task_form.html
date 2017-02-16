@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Updating the task"%}{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h3> {% trans "Updating the task" %} </h3>
+  <form class="form-horizontal" method="POST" action="{% url 'tasks:update_task'  pk=object.pk %}">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div class="control-group">
+      <div class="controls">
+        <button type="submit" class="btn">{% trans "Update the task info"%}</button>
+      </div>
+    </div>
+  </form>
+  <section class="vertical-space">
+	    <form method="POST" id="delete_form" action="{% url 'tasks:delete_task'  pk=object.pk %}">
+	    {% csrf_token %}
+	    <div class="control-group">
+	      <div class="controls">
+	        <button type="submit" class="btn">{% trans "Delete this task"%}</button>
+	      </div>
+	    </div>
+	  </form>
+  </section>
+ </div>
+{% endblock %}
+
+{% block javascript %}
+<script>
+
+$('#delete_form').submit(function(event){
+
+	event.preventDefault()
+	swal({
+	  text: "{% trans "Please confirm the deletion of this task" %}",
+	  showCancelButton: true,
+	  confirmButtonText: 'Submit',
+	  showLoaderOnConfirm: true,
+	  allowOutsideClick: false,
+	}).then(function(){
+		$('#delete_form').unbind('submit')
+		$('#delete_form').submit()
+	})
+})
+</script>
+
+{% endblock %}
