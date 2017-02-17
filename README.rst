@@ -44,6 +44,10 @@ Technical Stack
 
 * Automatic Certificate creation by let's encrypt (A+ on SSL labs https://www.ssllabs.com/ssltest/analyze.html?d=todolist.ovh)
 
+* Continuous Integration with Travis
+
+.. image:: https://travis-ci.org/arnaudblois/to_do_list.svg?branch=master
+    :target: https://travis-ci.org/arnaudblois/to_do_list
 
 Running the project locally
 ----------------------------

@@ -58,7 +58,7 @@ def compile_python_from_source():
         'build-essential', 'libncursesw5-dev', 'libreadline-gplv2-dev',
         'libssl-dev', 'libgdbm-dev', 'libc6-dev', 'libsqlite3-dev',
         'tk-dev', 'libbz2-dev', 'liblzma-dev', 'python3-dev', 'python3-PIL',
-        'git', 'libpq-dev',
+        'git', 'libpq-dev', 'gettext',
     )
     sudo('apt-get install -y {0}'.format(' '.join(packages_required)))
     sudo('mkdir -p /usr/local/opt/python-{0}'.format(py_version))
@@ -145,6 +145,7 @@ def set_project_and_gunicorn():
     with virtualenv():
         run('pip install -r requirements/production.txt')
         run('python manage.py collectstatic --settings=config.settings.production')
+        run('python manage.py compilemessages --settings=config.settings.production')
         run('python manage.py makemigrations --settings=config.settings.production')
         run('python manage.py migrate --settings=config.settings.production')
     put(current_dir + '.env', env.directory + 'config/settings')
@@ -157,4 +158,4 @@ def set_project_and_gunicorn():
     sudo('chmod 755 /home/ubuntu/web/gunicorn_start')
     sudo('supervisorctl reread')
     sudo('supervisorctl update')
-    sudo('supervisorctl start todolist')
+    sudo('supervisorctl restart todolist')
